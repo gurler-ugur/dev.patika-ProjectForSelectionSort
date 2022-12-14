@@ -1,8 +1,64 @@
-[22,27,16,2,18,6] -> Insertion Sort
-[2,27,16,22,18,6] -> Step I, checking for first data '22' (2 replaced with 22)
-[2,6,16,22,18,27] -> Step II, checking for second data '6' (27 replaced with 6)
-[2,6,16,22,18,27] -> Step III, checking for third data '16' (16 is min so no replacement)
-[2,6,16,18,22,27] -> Step IV, checking for fourth data '22' (22 replaced with 18)
-[2,6,16,18,22,27] -> Step V, Finish -> list is sorted.
-Big-O O(nˆ2)
-average case for '18' O(nˆ2)
+arr[] = {22,27,16,2,18,6} -> Insertion Sort
+
+// The first element in the array is assumed to be sorted. -> (22)
+// Compared the second element with the first element. -> (27 with 22)
+// First element is less than second element, so no swap.
+[22,27,16,2,18,6]
+
+// Third element compared with the elements on the left of it. -> (16) with (22,27)
+// There is no element smaller than it, then placed it at the beginning of the array.
+[16,22,27,2,18,6]
+
+// Fourth element compared with the elements on the left of it. -> (2) with (16,22,27)
+// There is no element smaller than it, then placed it at the beginning of the array.
+[2,16,22,27,18,6]
+
+// Fifth element compared with the elements on the left of it. -> (18) with (2,16,22,27)
+// Placed it just behind the first element smaller than it. (16) less than (18)
+[2,16,18,22,27,6]
+
+// Sixth element compared with the elements on the left of it. -> (6) with (2,16,18,22,27)
+// Placed it just behind the first element smaller than it. (2) less than (6)
+[2,6,16,18,22,27]
+
+// Big-O O(nˆ2)
+// average case for '18' O(nˆ2)
+
+---------------------------
+
+arr[] = {7,3,5,8,2,9,4,15,6} -> Selection Sort
+
+// Found the minimum element in arr[0...8] -> index
+// and placed it at beginning -> (2)
+[2,3,5,8,7,9,4,15,6]
+
+// Found the minimum element in arr[1...8] -> index
+// and placed it at beginning -> (3)
+[2,3,5,8,7,9,4,15,6]
+
+// Found the minimum element in arr[2...8] -> index
+// and placed it at beginning -> (4)
+[2,3,4,8,7,9,5,15,6]
+
+// Found the minimum element in arr[3...8] -> index
+// and placed it at beginning -> (5)
+[2,3,4,5,7,9,8,15,6]
+
+// Found the minimum element in arr[4...8] -> index
+// and placed it at beginning -> (6)
+[2,3,4,5,6,9,8,15,7]
+
+// Found the minimum element in arr[5...8] -> index
+// and placed it at beginning -> (7)
+[2,3,4,5,6,7,8,15,9]
+
+// Found the minimum element in arr[6...8] -> index
+// and placed it at beginning -> (8)
+[2,3,4,5,6,7,8,15,9]
+
+// Found the minimum element in arr[7...8] -> index
+// and placed it at beginning-> (9)
+[2,3,4,5,6,7,8,9,15]
+
+// Big-O O(nˆ2)
+
